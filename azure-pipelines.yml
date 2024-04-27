@@ -17,3 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(6a4558e8-dd6a-4b3e-8aff-2870b32d0071)'
+    appType: 'webApp'
+    appName: 'example-app-aalonso'
+    deployToSlotOrASE: true
+    resourceGroupName: 'resource-group'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
