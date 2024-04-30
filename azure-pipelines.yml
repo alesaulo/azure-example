@@ -16,6 +16,9 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- script: echo folder is $(System.DefaultWorkingDirectory)!
+  displayName: 'Run a one-line script'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
@@ -23,6 +26,8 @@ steps:
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure subscription 1(6a4558e8-dd6a-4b3e-8aff-2870b32d0071)'
