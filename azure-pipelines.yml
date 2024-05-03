@@ -39,4 +39,4 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'resource-group'
     SlotName: 'production'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/a'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)'
